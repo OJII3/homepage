@@ -29,15 +29,15 @@ export const ProductCard: FC<ProductCardProps> = ({
     <>
       <button
         className={classnames(
-          "flex flex-col items-center justify-center w-64 h-auto p-4 m-4 bg-white shadow-md rounded-xl hover:shadow-lg",
+          "flex flex-col items-center justify-center w-44 h-auto p-4 m-4 bg-white shadow-md rounded-xl hover:shadow-lg",
           styles.ProductCard
         )}
         onClick={() => {
           changeActiveState(true);
         }}
       >
-        <img src={image} alt="profile" className="w-32 h-32 rounded-full" />
-        <h2 className="mt-4 text-xl font-bold text-center text-gray-500">
+        <img src={image} alt="profile" className="object-contain w-32 h-28" />
+        <h2 className="px-1 mt-4 font-bold text-center text-gray-500 whitespace-break-spaces">
           {name}
         </h2>
       </button>
@@ -50,7 +50,7 @@ export const ProductCard: FC<ProductCardProps> = ({
         >
           <div
             className={classnames(
-              "flex flex-col items-center justify-center h-auto p-8 m-4 bg-white shadow-md rounded-xl hover:shadow-xl",
+              "relative flex flex-col items-center justify-center h-auto max-h-full overflow-y-auto p-8 mx-2 bg-white shadow-md rounded-xl hover:shadow-xl",
               styles.ProductCard
             )}
             onClick={(e) => {
@@ -68,7 +68,11 @@ export const ProductCard: FC<ProductCardProps> = ({
               <span className="absolute block w-8 h-1 bg-gray-500 rounded-full transform rotate-45"></span>
               <span className="absolute block w-8 h-1 bg-gray-500 rounded-full transform -rotate-45"></span>
             </button>
-            <img src={image} alt="profile" className="w-32 h-32 rounded-full" />
+            <img
+              src={image}
+              alt="profile"
+              className="relative block object-contain w-32 h-32"
+            />
             <h2 className="mt-4 text-xl font-bold text-center text-gray-500">
               {name}
             </h2>

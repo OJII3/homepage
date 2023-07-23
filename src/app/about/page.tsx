@@ -23,10 +23,16 @@ export default function About() {
       </header>
       <main className="flex flex-col p-8 mx-auto gap-32 max-w-screen-lg">
         <div>
-          <h2 className="mx-auto text-2xl font-bold text-gray-500">基本情報</h2>
+          <h2 className="mx-auto text-2xl font-bold text-gray-500">学歴</h2>
           <ul className="mt-4 text-gray-700">
             <li className="mx-auto text-xl list-disc list-inside marker:text-2xl">
-              機械系の大学生(2022年度入学)
+              2022.4: 東京農工大学・機械システム工学科 入学
+            </li>
+            <li className="mx-auto text-xl list-disc list-inside marker:text-2xl">
+              2024.3:
+            </li>
+            <li className="mx-auto text-xl list-disc list-inside marker:text-2xl">
+              2024.4:
             </li>
           </ul>
         </div>
@@ -40,7 +46,7 @@ export default function About() {
         </div>
         <div>
           <h2 className="mx-auto text-2xl font-bold text-gray-500">
-            主な制作物
+            割とちゃんとした制作物
           </h2>
           <ul className="flex flex-row mt-2 overflow-x-auto text-gray-700 sm: flex-nowrap whitespace-nowrap">
             <li>
@@ -50,10 +56,17 @@ export default function About() {
                 liveLink="https://www.tuatmcc.com"
                 sourceLink="https://github.com/tuatmcc/homepage2.0"
               >
-                <p>大学で所属するサークルのホームページを作成しました。</p>
                 <p>
-                  Next.js appDir
+                  所属サークルのホームページを作成しました。 Next.js appDir
                   を使用し、マークダウンのブログシステムを実装しました。
+                </p>
+                <br />
+                <p>
+                  <b>Stacks</b>
+                </p>
+                <p>
+                  pnpm, nextjs, typescript, css-modules, storybook, eslint,
+                  prettier, stylelint, github actions
                 </p>
               </ProductCard>
             </li>
@@ -67,7 +80,38 @@ export default function About() {
                 <p>
                   Tailwind CSS を使ってみたり、View Transition API
                   を使ってみたりしました。
+                  <br />
+                  今後はNext.jsのIntersecting Routes, WebGL,
+                  WASMなどを試す予定です。
                 </p>
+              </ProductCard>
+            </li>
+            <li>
+              <ProductCard name="3D Modeling" image="/works/n3d_front.png">
+                <p>Blender(とUnity) を用いて0から制作しました。</p>
+                <img src="/works/n3d_front.png" alt="n3d" />
+                <p>
+                  VRプラットフォームで動きます。今後はこのモデルを用いてフェイストラッキングやゲーム作成を行なう予定です。
+                </p>
+              </ProductCard>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="mx-auto text-2xl font-bold text-gray-500">
+            ちょっとした制作物
+          </h2>
+          <ul className="flex flex-row mt-2 overflow-x-auto text-gray-700 sm: flex-nowrap whitespace-nowrap">
+            <li>
+              <ProductCard
+                name="マークダウン用CLIツール(npm)"
+                image="/logo/npm-logo.png"
+              >
+                ユーザーが設定したremark,
+                rehypeプラグインを使用してマークダウンファイルをTypeScriptの型つきメタデータとHTMLに変換した本文のモジュールを生成するシンプルなnpm
+                packageを作成・公開しました。
+                <br />
+                なお、メンテナンスできなくなった他、ほぼ上位互換なライブラリが存在したため、すぐに使わなくなりました。
               </ProductCard>
             </li>
           </ul>
@@ -76,12 +120,15 @@ export default function About() {
           <h2 className="mx-auto text-2xl font-bold text-gray-500">
             趣味・スキル
           </h2>
-          <div className="flex flex-wrap mt-4 text-gray-700 gap-1">
-            <SkillCard name="Neovim" image="/skills/neovim-logo.png" />
-            <SkillCard name="Unity" image="/skills/unity-logo.png" />
-            <SkillCard name="Blender" image="/skills/blender-logo.png" />
-            <SkillCard name="AtCoder" image="/skills/atcoder-logo.png" />
-            <SkillCard name="ROS2" image="/skills/ros-logo.png" />
+          <div className="flex flex-wrap justify-start mt-4 text-gray-700 gap-1">
+            <SkillCard name="Neovim" image="/logo/neovim-logo.png" />
+            <SkillCard name="Unity" image="/logo/unity-logo.png" />
+            <SkillCard name="Blender" image="/logo/blender-logo.png" />
+            <SkillCard name="AtCoder" image="/logo/atcoder-logo.png" />
+            <SkillCard name="ROS2" image="/logo/ros-logo.png" />
+            <SkillCard name="React" image="/logo/react-logo.png" />
+            <SkillCard name="TypeScript" image="/logo/typescript-logo.png" />
+            <SkillCard name="Ubuntu" image="/logo/ubuntu-logo.png" />
           </div>
         </div>
       </main>
