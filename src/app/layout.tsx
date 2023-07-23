@@ -9,6 +9,7 @@ const inter = Inter({ weight: ["400", "700"], subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "OJII3",
   description: "Home of OJII3",
+  icons: ["https://avatars.githubusercontent.com/u/84656786?v=4"],
 };
 
 export default function RootLayout({
