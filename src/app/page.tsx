@@ -28,13 +28,13 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <NextLink
             href="/about"
-            className="m-auto text-2xl font-bold text-center text-gray-500 transition-all hover:underline"
+            className="m-auto text-xl font-bold text-center text-gray-500 transition-all hover:underline"
           >
             About Me {"->"}
           </NextLink>
           <NextLink
             href="/playground"
-            className="m-auto text-2xl font-bold text-center text-gray-500 transition-all hover:underline"
+            className="m-auto text-xl font-bold text-center text-gray-500 transition-all hover:underline"
           >
             My Playground {"->"}
           </NextLink>
